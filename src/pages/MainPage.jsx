@@ -32,9 +32,7 @@ export const MainPage = () => {
 
                         <button onClick={handleGoogle} className="h-[40px] w-[300px] rounded-full bg-white hover:bg-gray-200 text-black font-bold flex justify-center items-center mb-3"><img className="w-[17px] h-[17px] -ml-4 mt-1 mr-1" src="src/assets/google-logo.png" alt="" />Entrar con Google</button>
                     </div>
-                    <div>
-                        <button className="h-[40px] w-[300px] rounded-full bg-white hover:bg-gray-200 text-black font-bold flex justify-center items-center"><img className="w-[17px] h-[17px] -ml-4 mt-1 mr-1" src="src/assets/apple-logo.png" alt="" />Entrar con Apple</button>
-                    </div>
+                    
                     <p className="flex justify-center w-[315px]">o</p>
                     <div>
                         <button onClick={handleClickRegister} className="h-[40px] w-[300px] rounded-full bg-sky-400 hover:bg-sky-600 text-white font-bold flex justify-center items-center">Crear Cuenta</button>
