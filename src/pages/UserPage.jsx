@@ -144,7 +144,7 @@ export const UserPage = () => {
             <div className="flex flex-col left-28 mx-auto mt-20 py-10 pl-10 border border-[#2F3336] w-6/6 px-20 md:flex md:flex-col md:left-[70px] md:ml-24 md:mt-[200px] md:py-10 md:pl-10 md:border md:border-[#2F3336] md:w-5/6 lg:px-20">
                 {userTweets.length > 0 ? (
                     userTweets.map((tweet) => (
-                        <div key={tweet.id} className="p-4 border-b border-gray-300">
+                        <div key={tweet.id} className="-ml-8">
                             <div className="flex justify-between">
                                 <img className="w-[40px] h-[40px] md:w-[40px] md:h-[40px] rounded-full" 
                                     src={user.photoURL || 'src/assets/default-profile.png'} 

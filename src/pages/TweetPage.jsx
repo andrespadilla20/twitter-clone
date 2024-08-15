@@ -116,7 +116,7 @@ export const TweetPage = () => {
             <div className="hidden md:flex flex-col left-28 mx-auto mt-56 py-10 pl-10 border border-[#2F3336] w-6/6 px-20">
                 <div>
                     {tweets.map((tweet) => (
-                        <div key={tweet.id} className="p-4 border-b border-gray-300">
+                        <div key={tweet.id} className="-ml-8">
                             <div className="flex">
                                 <img
                                     className="w-[40px] h-[40px] rounded-full"

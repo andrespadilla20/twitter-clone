@@ -102,18 +102,7 @@ export const HomePage = () => {
             </div>
 
             {/* Para ti y Siguiendo */}
-            <h1>Bienvenido, {user.email}</h1>
-            <div className="fixed md:flex">
-                <div className="fixed h-[53px] flex justify-around md:justify-center md:left-[160px] md:-top-12 md:w-10/12 w-screen mt-12 -ml-8 md:border md:border-[#2F3336] md:pl-0">
-                    <div className="hover:bg-[#1B1B1B] flex justify-center w-screen md:w-3/6">
-                        <button className="text-white font-bold">Para ti</button>
-                    </div>
-                    <div className="hover:bg-[#1B1B1B] flex justify-center w-screen md:w-3/6">
-                        <button className="text-white font-bold">Siguiendo</button>
-                    </div>
-                </div>
-            </div>
-
+            
             {/* Botón Post */}
             <div className="fixed md:left-8 md:top-[600px] md:hidden flex justify-center items-center rounded-full w-[65px] h-[65px] bottom-[100px] right-[40px] hover:bg-[#1A8CD8] bg-cyan-500">
                 <button onClick={handleTweet} className="w-[30px] h-[30px] rounded-full">
@@ -122,10 +111,10 @@ export const HomePage = () => {
             </div>
 
             {/* Caja de Tweets */}
-            <div className="flex flex-col left-28 mx-auto -top-24 py-10 pl-10 border border-[#2F3336] w-6/6 px-20 md:flex md:flex-col md:left-[70px] md:ml-24 md:mt-[200px] md:py-10 md:pl-10 md:border md:border-[#2F3336] md:w-5/6 lg:px-20">
+            <div className="flex flex-col left-28 mx-auto -top-24 mt-24 py-10 pl-10 border border-[#2F3336] w-6/6 px-20 md:flex md:flex-col md:left-[70px] md:ml-24  md:py-10 md:pl-10 md:border md:border-[#2F3336] md:w-5/6 lg:px-20">
                 {tweets.length > 0 ? (
                     tweets.map((tweet) => (
-                        <div key={tweet.id} className="p-4 border-b border-gray-300">
+                        <div key={tweet.id} className="-ml-8 ">
                             <div className="flex justify-between items-center">
                                 <img className="w-[40px] h-[40px] md:w-[40px] md:h-[40px] rounded-full" src={user.photoURL || 'src/assets/default-profile.png'} alt="PFP" />
                                 <div className="flex-grow ml-4">
