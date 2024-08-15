@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
-import logo1 from "@assets/twitter-logo.png";
-import logo2 from  "@assets/google-logo.png"
+import twitter from "@assets/twitter-logo.png";
+import google from  "@assets/google-logo.png"
 
 export const MainPage = () => {
 
@@ -23,14 +23,14 @@ export const MainPage = () => {
         <>
             <div className="2xl:flex xl:flex lg:flex md:flex -ml-[80px] ">
                 <div className="2xl:w-[336px] 2xl:h-[303px] xl:h-[300px] xl:w-[300px] lg:w-[240px] lg:h-[240px] md:w-[240px] md:h-[200px] h-[100px] w-[100px] 2xl:mt-40 xl:mt-40  2xl:ml-7 xl:ml-7 lg:ml-7 ml-32 md:mt-52">
-                    <img className="lg:mt-16" src={logo1} alt="" />
+                    <img className="lg:mt-16" src={twitter} alt="" />
                 </div>
                 <div className="bg-black min-h-screen text-gray-400 ml-32">
                     <p className="text-[60px] font-bold text-left mb-16">Lo que está<br /> pasando ahora</p>
                     <p className="text-[30px] font-bold text-left mb-10">Únete Hoy</p>
                     <div className="">
 
-                        <button onClick={handleGoogle} className="h-[40px] w-[300px] rounded-full bg-white hover:bg-gray-200 text-black font-bold flex justify-center items-center mb-3"><img className="w-[17px] h-[17px] -ml-4 mt-1 mr-1" src={logo2} alt="" />Entrar con Google</button>
+                        <button onClick={handleGoogle} className="h-[40px] w-[300px] rounded-full bg-white hover:bg-gray-200 text-black font-bold flex justify-center items-center mb-3"><img className="w-[17px] h-[17px] -ml-4 mt-1 mr-1" src={google} alt="" />Entrar con Google</button>
                     </div>
                     
                     <p className="flex justify-center w-[315px]">o</p>

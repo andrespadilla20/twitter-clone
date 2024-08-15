@@ -1,7 +1,9 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
-
+import twitter from "@assets/twitter-logo.png";
+import back from "@assets/x-icon.png";
+import google from "@assets/google-logo.png";
 
 
 export const LoginPage = () => {
@@ -52,14 +54,14 @@ export const LoginPage = () => {
 
             <div className="md:flex md:flex-wrap md:items-center md:justify-center md:mx-auto md:fixed md:inset-0">
                 <div className="flex -ml-5 md:h-[600px] md:w-[600px] md:rounded-lg md:border ">
-                    <button onClick={handleClickBack} className="text-white font-bold w-[50px] h-[50px] rounded-full bg-black hover:bg-slate-950 flex justify-center items-center"><img src="src/assets/x-icon.png" alt="" /></button>
-                    <img className="w-[40px] h-[40px] mx-auto mt-10" src="src/assets/twitter-logo.png" alt="" />
+                    <button onClick={handleClickBack} className="text-white font-bold w-[50px] h-[50px] rounded-full bg-black hover:bg-slate-950 flex justify-center items-center"><img src={back} alt="" /></button>
+                    <img className="w-[40px] h-[40px] mx-auto mt-10" src={twitter} alt="" />
                 </div>
                 <div className="md:fixed md:mx-auto md:mt-5">
                     <h1 className="text-[35px] text-gray-400 font-bold mb-10 mt-7">Inicia sesión en X</h1>
                     <div className="flex justify-center items-center mb-4">
 
-                        <button onClick={handleGoogle} className="h-[40px] w-[300px] rounded-full bg-white hover:bg-gray-200 text-black font-bold flex justify-center items-center mb-3"><img className="w-[17px] h-[17px] -ml-4 mt-1 mr-1" src="src/assets/google-logo.png" alt="" />Entrar con Google</button>
+                        <button onClick={handleGoogle} className="h-[40px] w-[300px] rounded-full bg-white hover:bg-gray-200 text-black font-bold flex justify-center items-center mb-3"><img className="w-[17px] h-[17px] -ml-4 mt-1 mr-1" src={google} alt="" />Entrar con Google</button>
                     </div>
                     
 

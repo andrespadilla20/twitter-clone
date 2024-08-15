@@ -3,6 +3,11 @@ import { useAuth } from "../context/authContext";
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../data/firebase";
+import twitter from "@assets/twitter-logo.png";
+import home from "@assets/home-icon.png";
+import user from "@assets/profile-unselected-icon.png";
+import tweet from "@assets/post-icon.png";
+import signout from "@assets/signout.png";
 
 export const UserPage = () => {
     const { user, signout } = useAuth();
@@ -81,28 +86,28 @@ export const UserPage = () => {
             <div className="fixed flex md:flex-col md:justify-center md:-top-[10px] md:h-screen md:-ml-0 md:w-auto justify-evenly items-center h-[60px] w-screen bottom-1 -ml-8 lg:left-10">
                 <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] hidden md:flex rounded-full justify-center items-center hover:bg-[#1B1B1B]">
                     <button onClick={handleHome} className="w-[20px] h-[20px] md:w-[30px] md:h-[30px] rounded-full">
-                        <img src="src/assets/twitter-logo.png" alt="Twitter logo" />
+                        <img src={twitter} alt="Twitter logo" />
                     </button>
                 </div>
                 <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full flex justify-center items-center hover:bg-[#1B1B1B]">
                     <button onClick={handleHome} className="w-[20px] h-[20px] md:w-[30px] md:h-[30px] rounded-full">
-                        <img src="src/assets/home-icon.png" alt="Home icon" />
+                        <img src={home}alt="Home icon" />
                     </button>
                 </div>
                 {/* Otros botones */}
                 <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full flex justify-center items-center hover:bg-[#1B1B1B]">
                     <button className="w-[20px] h-[20px] md:w-[30px] md:h-[30px] rounded-full">
-                        <img src="src/assets/profile-unselected-icon.png" alt="Profile icon" />
+                        <img src={user} alt="Profile icon" />
                     </button>
                 </div>
                 <div className="md:w-[60px] md:h-[60px] md:rounded-full flex justify-center items-center w-[40px] h-[40px] md:flex md:justify-center md:items-center md:hover:bg-[#1B1B1B]">
                     <button onClick={handleSignout} className="w-[20px] h-[20px] rounded-full md:w-[30px] md:h-[30px] md:rounded-full">
-                        <img src="src/assets/signout-icon.png" alt="Sign out icon" />
+                        <img src={signout} alt="Sign out icon" />
                     </button>
                 </div>
                 <div className="md:w-[65px] md:h-[65px] md:rounded-full hidden md:flex md:justify-center md:items-center md:mt-12 md:hover:bg-[#1A8CD8] bg-cyan-500">
                     <button onClick={handleTweet} className="md:w-[30px] md:h-[30px] md:rounded-full">
-                        <img src="src/assets/post-icon.png" alt="Post icon" />
+                        <img src={tweet} alt="Post icon" />
                     </button>
                 </div>
             </div>
@@ -131,7 +136,7 @@ export const UserPage = () => {
             {/* Botón Post */}
             <div className="fixed md:left-8 md:top-[600px] md:hidden flex justify-center items-center rounded-full w-[65px] h-[65px] bottom-[100px] right-[40px] hover:bg-[#1A8CD8] bg-cyan-500">
                 <button onClick={handleTweet} className="w-[30px] h-[30px] rounded-full">
-                    <img src="src/assets/post-icon.png" alt="Post icon" />
+                    <img src={tweet} alt="Post icon" />
                 </button>
             </div>
 

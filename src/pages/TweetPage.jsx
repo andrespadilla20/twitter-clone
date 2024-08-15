@@ -3,7 +3,8 @@ import { useAuth } from "../context/authContext";
 import { useEffect, useState } from "react";
 import { collection, getDocs, addDoc, query, where, Timestamp, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../data/firebase";
-
+import back from "@assets/x-icon.png";
+import twitter from "@assets/twitter-icon.png";
 export const TweetPage = () => {
     const navigate = useNavigate();
     const { user } = useAuth();
@@ -75,11 +76,11 @@ export const TweetPage = () => {
                 onClick={handleClickBack}
                 className="text-white font-bold w-[50px] h-[50px] rounded-full bg-black hover:bg-slate-950 flex justify-center items-center"
             >
-                <img src="src/assets/x-icon.png" alt="Back icon" />
+                <img src={back} alt="Back icon" />
             </button>
             <img
                 className="w-[40px] h-[40px] mx-auto -mt-10"
-                src="src/assets/twitter-logo.png"
+                src={twitter}
                 alt="Twitter logo"
             />
             <form
