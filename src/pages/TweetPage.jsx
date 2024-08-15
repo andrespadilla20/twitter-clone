@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { collection, getDocs, addDoc, query, where, Timestamp, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../data/firebase";
 import back from "@assets/x-icon.png";
-import twitter from "@assets/twitter-icon.png";
+import twitter from "@assets/twitter-logo.png";
 export const TweetPage = () => {
     const navigate = useNavigate();
     const { user } = useAuth();

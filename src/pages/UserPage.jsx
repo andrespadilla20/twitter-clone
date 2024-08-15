@@ -5,9 +5,9 @@ import { collection, getDocs, query, where, deleteDoc, doc } from "firebase/fire
 import { db } from "../data/firebase";
 import twitter from "@assets/twitter-logo.png";
 import home from "@assets/home-icon.png";
-import user from "@assets/profile-unselected-icon.png";
+import User from "@assets/profile-unselected-icon.png";
 import tweet from "@assets/post-icon.png";
-import signout from "@assets/signout.png";
+import Signout from "@assets/signout-icon.png";
 
 export const UserPage = () => {
     const { user, signout } = useAuth();
@@ -97,12 +97,12 @@ export const UserPage = () => {
                 {/* Otros botones */}
                 <div className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] rounded-full flex justify-center items-center hover:bg-[#1B1B1B]">
                     <button className="w-[20px] h-[20px] md:w-[30px] md:h-[30px] rounded-full">
-                        <img src={user} alt="Profile icon" />
+                        <img src={User} alt="Profile icon" />
                     </button>
                 </div>
                 <div className="md:w-[60px] md:h-[60px] md:rounded-full flex justify-center items-center w-[40px] h-[40px] md:flex md:justify-center md:items-center md:hover:bg-[#1B1B1B]">
                     <button onClick={handleSignout} className="w-[20px] h-[20px] rounded-full md:w-[30px] md:h-[30px] md:rounded-full">
-                        <img src={signout} alt="Sign out icon" />
+                        <img src={Signout} alt="Sign out icon" />
                     </button>
                 </div>
                 <div className="md:w-[65px] md:h-[65px] md:rounded-full hidden md:flex md:justify-center md:items-center md:mt-12 md:hover:bg-[#1A8CD8] bg-cyan-500">
